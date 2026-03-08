@@ -1,1 +1,19 @@
+name: Simple API Test
 
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  api-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Google
+        run: |
+          echo "Testing internet access..."
+
+          curl -I https://www.google.com
+
+          echo "API test finished successfully"
