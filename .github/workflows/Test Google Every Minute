@@ -2,7 +2,7 @@ name: Test Google Every Minute
 
 on:
   schedule:
-    - cron: "*/1 * * * *"   # runs every 1 minute
+    - cron: "*/5 * * * *"   # runs every 5 minute
   workflow_dispatch:
 
 jobs:
